@@ -53,6 +53,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get 'memos' => 'memos#index'
+  get 'timeline' => 'timeline#index'
 
 end
