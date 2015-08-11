@@ -44,5 +44,7 @@ group :development, :test do
 
   gem 'rspec-rails'
 
+  gem 'slim-rails'
+
 end
 
