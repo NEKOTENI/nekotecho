@@ -1,1 +1,17 @@
 h1 ねこてちょうのメインページ（Timeline）です
+
+table
+  thread
+    tr
+     th 投稿日時
+     th 更新日時
+     th イメージ
+     th テキスト
+
+  tbody
+    - @memos.each do |memo|
+      tr
+        td = memo.created_at
+        td = memo.updated_at
+        td = memo.image
+        td = memo.text
