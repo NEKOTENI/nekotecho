@@ -1,77 +1,36 @@
-h1 ねこてちょうのメインページ（Timeline）です
+doctype html
+html lang="ja"
+  head
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    /! The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title ねこてちょう
+    /! Bootstrap
+    link href="css/bootstrap.min.css" rel="stylesheet" /
+    /! HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    /! WARNING: Respond.js doesn't work if you view the page via file://
+    /![if lt IE 9]
+      | script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"
+      | script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
 
-table
-  thread
-    tr
-     th 投稿日時
-     th 更新日時
-     th イメージ
-     th テキスト
+  body
 
-  tbody
-    - @memos.each do |memo|
-      tr
-        td = memo.created_at
-        td = memo.updated_at
-        td = memo.image
-        td = memo.text
+    #header.container style="background:pink;"
+      h1 ねこてちょう
 
-br
+    .container
+      .row
+        .col-sm-4 style="background:darkpink;"  Side
+        .col-sm-8 style="background:white;"  Main
 
-.list-group
-  button.list-group-item type="button"  Cras justo odio
-  button.list-group-item type="button"  Dapibus ac facilisis in
-  button.list-group-item type="button"  Morbi leo risus
-  button.list-group-item type="button"  Porta ac consectetur ac
-  button.list-group-item type="button"  Vestibulum at eros
+    #footer.container style="background:pink;"
+      p ねこてちょうの半分は優しさでできています。バファリンと同じです。
 
-br
 
-.panel.panel-default
-  .panel-heading Panel heading without title
-  .panel-body
-    | Panel content
-.panel.panel-default
-  .panel-heading
-    h3.panel-title Panel title
-  .panel-body
-    | Panel content
 
-br
 
-.jumbotron
-  h1 ねこてちょう
-  p あなたの大切な猫のログ
-  p
-    a.btn.btn-primary.btn-lg href="#" role="button"  Sign in
-
-br
-
-nav
-  ul.pagination
-    li
-      a aria-label="Previous" href="#"
-        span aria-hidden="true"  &laquo;
-    li
-      a href="#"  1
-    li
-      a href="#"  2
-    li
-      a href="#"  3
-    li
-      a href="#"  4
-    li
-      a href="#"  5
-    li
-      a aria-label="Next" href="#"
-        span aria-hidden="true"  &raquo;
-
-br
-
-.row
-  .col-xs-6.col-md-3
-    a.thumbnail href="#"
-      img alt="..." src="http://blogimg.goo.ne.jp/user_image/7c/96/aeeec022e5bab8ef4f8298daa50e697c.jpg"
-  .col-xs-6.col-md-3
-    a.thumbnail href="#"
-    img alt="..." src="http://blogimg.goo.ne.jp/user_image/7c/96/aeeec022e5bab8ef4f8298daa50e697c.jpg"
+  /! jQuery (necessary for Bootstrap's JavaScript plugins)
+    | script src="http//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+  /! Include all compiled plugins (below), or include individual files as needed
+    | script src="js/bootstrap.min.js"
