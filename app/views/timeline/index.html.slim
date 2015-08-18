@@ -16,22 +16,31 @@ html lang="ja"
 
   body
 
-    #header.container style="background:pink;"
+    #header.container style="background:deeppink; height:100px"
       h1 ねこてちょう
 
-    .container
+    .container style="padding:10px 0"
       .row
         .col-sm-4 style="background:white;"
-          .list-group
-            button.list-group-item type="button"  クッキー
-            button.list-group-item type="button"  セツ
-            button.list-group-item type="button"  ラス
-            button.list-group-item type="button"  キアロ
-            button.list-group-item type="button"  病院
-            button.list-group-item type="button"  ねこ缶
-            button.list-group-item type="button"  カリカリ
-            button.list-group-item type="button"  にくきゅう
-            button.list-group-item type="button"  爪切り
+          .panel.panel-default
+            /! Default panel contents
+            .panel-heading タグ一覧
+            .panel-body
+              p タグをクリックすると、タグ付けされた記事だけがタイムラインへ表示されます。
+              p タグは自由に作成することができます。
+              button.btn.btn-default type="submit" タグを作る
+            /! List group
+            ul.list-group
+              button.list-group-item   すべてのタグ
+              button.list-group-item   クッキー
+              button.list-group-item   セツ
+              button.list-group-item   ラス
+              button.list-group-item   キアロ
+              button.list-group-item   病院
+              button.list-group-item   ねこ缶
+              button.list-group-item   カリカリ
+              button.list-group-item   にくきゅう
+              button.list-group-item   爪切り
 
         .col-sm-8 style="background:white;"
           .panel.panel-default
@@ -92,13 +101,13 @@ html lang="ja"
               | ねーねーねー。
               | そのお刺身、一人で食べちゃうつもりぃ？
               img.img-responsive src="http://blogimg.goo.ne.jp/user_image/7c/96/aeeec022e5bab8ef4f8298daa50e697c.jpg"
-            button.btn.btn-default.btn-xs type="submit"  クッキー
+            button.btn.btn-default.btn-xs type="submit" クッキー
 
 
 
 
 
-    #footer.container style="background:pink;"
+    #footer.container style="background:deeppink;"
       p ねこてちょうの半分は優しさでできています。バファリンと同じです。
 
 
