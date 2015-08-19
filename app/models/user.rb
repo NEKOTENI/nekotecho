@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-# sorceryページの指示
   authenticates_with_sorcery!
 
   validates :password, length: { minimum: 3 }

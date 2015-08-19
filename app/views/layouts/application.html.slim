@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Tutorial
+    title ねこてちょう
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -17,4 +17,5 @@ html
 
     p#notice = flash[:notice]
     p#alert = flash[:alert]
+
     == yield
