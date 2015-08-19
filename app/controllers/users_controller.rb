@@ -67,8 +67,9 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # sorceryページで指定の"user_params"を使用。
     def user_params
-      params.require(:user).permit(:email, :crypted_password, :salt)
+      params.require(:user).permit(:email, :password, :password_confirmation)
     end
+end
 end
