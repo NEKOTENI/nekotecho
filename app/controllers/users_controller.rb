@@ -57,13 +57,13 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    # sorceryページで指定の"user_params"を使用。
-    def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
-    end
+  # sorceryページで指定の"user_params"を使用。
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
 end
