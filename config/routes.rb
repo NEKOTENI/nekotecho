@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
+
+  get 'timeline' => 'timeline#index'
+  get 'timeline/new' => 'timeline#new'
+  post 'timeline' => 'timeline#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,6 +63,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get 'timeline' => 'timeline#index'
-
 end

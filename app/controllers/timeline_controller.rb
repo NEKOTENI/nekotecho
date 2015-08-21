@@ -5,4 +5,13 @@ class TimelineController < ApplicationController
     @tags = Tag.all
     @users = User.all
 	end
+
+  def new
+  end
+
+  def create
+    Memo.create!(text: params[:text], image: params[:image])
+    redirect_to(:timeline)
+  end
+
 end

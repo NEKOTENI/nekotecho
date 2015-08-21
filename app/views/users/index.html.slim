@@ -1,25 +1,3 @@
-/ h1 ねこてちょう
-
-/ table
-/   thead
-/     tr
-/       th Email
-/       th
-/       th
-/       th
-
-/   tbody
-/     - @users.each do |user|
-/       tr
-/         td = user.email
-/         td = link_to 'Show', user
-/         td = link_to 'Edit', edit_user_path(user)
-/         td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-/ br
-
-/ = link_to 'New User', new_user_path
-
 .container style="padding:20px"
   .jumbotron style="background-image:url(http://blogimg.goo.ne.jp/user_image/7c/96/aeeec022e5bab8ef4f8298daa50e697c.jpg); background-size:100%;"
     h1 ねこてちょう
