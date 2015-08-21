@@ -44,69 +44,17 @@ html lang="ja"
               button.list-group-item   爪切り
 
         .col-sm-8 style="background:white;"
-          .panel.panel-default
-            .panel-heading
-              | 2015/8/14 17:03
-            .panel-body
-              | 今日も1日暑かった。
-              br
-              | 夜は雨になるらしい。
-              br
-              | それがわかるのか、猫氏はアンニュイ気味。
-            button.btn.btn-default.btn-xs type="submit"  クッキー
-            button.btn.btn-default.btn-xs type="submit"  セツ
-            button.btn.btn-default.btn-xs type="submit"  ラス
-            button.btn.btn-default.btn-xs type="submit"  キアロ
+          = @memos.each do |memo|
+            .panel.panel-default
+              .panel-heading
+                = memo.created_at
+              .panel-body
+                = memo.text
 
-          .panel.panel-default
-            .panel-heading
-              | 2015/8/13 09:03
-            .panel-body
-              | 爪切り大嫌い〜〜〜！！！
-            button.btn.btn-default.btn-xs type="submit"  キアロ
-
-          .panel.panel-default
-            .panel-heading
-              | 2015/8/12 11:35
-            .panel-body
-              | 血液検査 ＠8000円×４＝32000円
-              br
-              | ごふっ。
-            button.btn.btn-default.btn-xs type="submit"  病院
-            button.btn.btn-default.btn-xs type="submit"  クッキー
-            button.btn.btn-default.btn-xs type="submit"  セツ
-            button.btn.btn-default.btn-xs type="submit"  ラス
-            button.btn.btn-default.btn-xs type="submit"  キアロ
-
-          .panel.panel-default
-            .panel-heading
-              | 2015/8/12 
-            .panel-body
-              | さ、健康診断に行きますよ！
-              br
-              | １匹あたり５キロ×４＝２０キロ！！
-              br
-              | 重いけど！でも大事な用事だから行くよー！！！
-              br
-              | 腰を痛めないようにしなくちゃ・・・。
-            button.btn.btn-default.btn-xs type="submit"  病院
-            button.btn.btn-default.btn-xs type="submit"  クッキー
-            button.btn.btn-default.btn-xs type="submit"  セツ
-            button.btn.btn-default.btn-xs type="submit"  ラス
-            button.btn.btn-default.btn-xs type="submit"  キアロ
-
-          .panel.panel-default
-            .panel-heading
-              | 2015/8/11
-            .panel-body
-              | ねーねーねー。
-              | そのお刺身、一人で食べちゃうつもりぃ？
-              img.img-responsive src="http://blogimg.goo.ne.jp/user_image/7c/96/aeeec022e5bab8ef4f8298daa50e697c.jpg"
-            button.btn.btn-default.btn-xs type="submit" クッキー
-
-
-
-
+              button.btn.btn-default.btn-xs type="submit"  クッキー
+              button.btn.btn-default.btn-xs type="submit"  セツ
+              button.btn.btn-default.btn-xs type="submit"  ラス
+              button.btn.btn-default.btn-xs type="submit"  キアロ
 
     #footer.container style="background:deeppink;"
       p ねこてちょうの半分は優しさでできています。バファリンと同じです。
