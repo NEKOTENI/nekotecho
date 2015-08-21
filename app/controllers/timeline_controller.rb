@@ -10,7 +10,7 @@ class TimelineController < ApplicationController
   end
 
   def create
-    Memo.create!(text: params[:text], image: params[:image])
+    Memo.create!(text: params[:text], image: params[:image], user_id: current_user.id)
     redirect_to(:timeline)
   end
 
