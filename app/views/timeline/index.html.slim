@@ -44,10 +44,10 @@ html lang="ja"
               button.list-group-item   爪切り
 
         .col-sm-8 style="background:white;"
-          = @memos.each do |memo|
+          - @memos.each do |memo|
             .panel.panel-default
               .panel-heading
-                = memo.created_at
+                = memo.created_at.in_time_zone('Tokyo').strftime("%Y年%m月%d日 %H時%M分")
               .panel-body
                 = memo.text
 

@@ -1,7 +1,7 @@
 class TimelineController < ApplicationController
 
 	def index
-    @memos = Memo.all
+    @memos = Memo.all.order("id DESC")
     @tags = Tag.all
     @users = User.all
 	end
