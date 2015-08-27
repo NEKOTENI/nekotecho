@@ -1,0 +1,15 @@
+  = form_tag('/timeline', method: :post) do
+
+    .container style="padding: 10px;"
+      .row
+        .col-sm-4 style="background:white;"
+          .panel.panel-primary
+            /! Default panel contents
+            .panel-heading.h3 タグを作成する
+            .panel-body
+              .field
+              = label_tag :タグ名
+              br
+              = text_field_tag :text
+              .actions
+              = submit_tag "投稿する"
