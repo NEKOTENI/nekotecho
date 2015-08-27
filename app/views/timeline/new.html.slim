@@ -17,7 +17,10 @@
               = text_field_tag :image
               .field
               = label_tag :タグを選ぶ（タグなしでも投稿できます！）
+              .checkbox
+              - @tags.each do |tag|
+                input type="checkbox" = tag.tag
               br
-              = password_field_tag :tag
+              br
               .actions
               = submit_tag "投稿する"
