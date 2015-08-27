@@ -18,7 +18,7 @@ html lang="ja"
 
     #header.container style="background:pink; height: 120px;"
       h1 ねこてちょう
-      a.btn.btn-primary.btn-lg href="timeline/new" role="button" style="float:right" メモを投稿する
+      a.btn.btn-primary.btn-lg href="timeline/new" type="submit" style="float:right" メモを投稿する
 
     .container style="padding:10px 0"
       .row
@@ -29,7 +29,7 @@ html lang="ja"
             .panel-body
               p タグをクリックすると、タグ付けされた記事だけがタイムラインへ表示されます。
               p タグは自由に作成することができます。
-              button.btn.btn-default type="submit" タグを作る
+              a.button.btn.btn-default href="timeline/new_tag" type="submit" タグを作る
             /! List group
             ul.list-group
               button.list-group-item   すべてのタグ
