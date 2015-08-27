@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post 'timeline' => 'timeline#create'
 
   get 'timeline/new_tag' => 'tags#new'
-  post 'timeline' => 'tags#create'
+  post 'timeline/new_tag' => 'tags#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
