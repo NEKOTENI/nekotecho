@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'timeline' => 'timeline#index'
   get 'timeline/new' => 'timeline#new'
   post 'timeline' => 'timeline#create'
+
+  get 'timeline/new_tag' => 'tags#new'
+  post 'timeline' => 'tags#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
