@@ -27,7 +27,7 @@ html lang="ja"
             /! Default panel contents
             .panel-heading タグ一覧
             .panel-body
-              p タグをクリックすると、タグ付けされた記事だけがタイムラインへ表示されます。
+              p リストのタグをクリックすると、タグ付けされた記事だけがタイムラインへ表示されます。
               p タグは自由に作成することができます。
               = link_to "タグを作る", timeline_new_tag_path, class:["button","btn","btn-default"]
             /! List group
@@ -47,7 +47,8 @@ html lang="ja"
                   = memo.text
 
                 - memo.tags.each do |tag|
-                  button.btn.btn-default.btn-xs type="submit" = tag.tag
+                  = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","btn","btn-default","btn-xs"]
+                  / button.btn.btn-default.btn-xs type="submit" = tag.tag
           - else
             .panel-body
               p まだ記事が投稿されていません
