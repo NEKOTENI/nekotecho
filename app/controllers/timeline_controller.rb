@@ -1,7 +1,13 @@
 class TimelineController < ApplicationController
 
 	def index
-    @memos = Memo.where(user_id: current_user.id).order("id DESC")
+    if params[:tag_id]
+      tag = Tag.find_by(id: params[:tag_id], user_id: current_user.id)
+      @memos = tag.memos.order("id DESC") if tag
+    else
+      @memos = Memo.where(user_id: current_user.id).order("id DESC")
+    end
+
     @tags = Tag.where(user_id: current_user.id)
 	end
 

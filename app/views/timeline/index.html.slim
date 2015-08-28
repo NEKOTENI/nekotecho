@@ -29,26 +29,28 @@ html lang="ja"
             .panel-body
               p タグをクリックすると、タグ付けされた記事だけがタイムラインへ表示されます。
               p タグは自由に作成することができます。
-              a.button.btn.btn-default href="/timeline/new_tag" type="submit" タグを作る
+              = link_to "タグを作る", timeline_new_tag_path, class:["button","btn","btn-default"]
             /! List group
             ul.list-group
-              button.list-group-item   すべてのタグ
+              = link_to "すべて", timeline_path, class: ["button","list-group-item"]
               - @tags.each do |tag|
-                button.list-group-item   =tag.tag
+                - active = "active" if params[:tag_id] == tag.id.to_s
+                = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","list-group-item",active]
 
         .col-sm-8 style="background:white;"
-          - @memos.each do |memo|
-            .panel.panel-default
-              .panel-heading
-                = memo.created_at.in_time_zone('Tokyo').strftime("%Y年%m月%d日 %H時%M分")
-              .panel-body
-                = memo.text
+          - if @memos.present?
+            - @memos.each do |memo|
+              .panel.panel-default
+                .panel-heading
+                  = memo.created_at.in_time_zone('Tokyo').strftime("%Y年%m月%d日 %H時%M分")
+                .panel-body
+                  = memo.text
 
-              - memo.tags.each do |tag|
-                button.btn.btn-default.btn-xs type="submit" = tag.tag
-              / button.btn.btn-default.btn-xs type="submit"  セツ
-              / button.btn.btn-default.btn-xs type="submit"  ラス
-              / button.btn.btn-default.btn-xs type="submit"  キアロ
+                - memo.tags.each do |tag|
+                  button.btn.btn-default.btn-xs type="submit" = tag.tag
+          - else
+            .panel-body
+              p まだ記事が投稿されていません
 
     #footer.container style="background:deeppink;"
       p ねこてちょうの半分は優しさでできています。バファリンと同じです。
