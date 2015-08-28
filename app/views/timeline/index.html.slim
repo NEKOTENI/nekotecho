@@ -44,10 +44,11 @@ html lang="ja"
               .panel-body
                 = memo.text
 
-              button.btn.btn-default.btn-xs type="submit"  クッキー
-              button.btn.btn-default.btn-xs type="submit"  セツ
-              button.btn.btn-default.btn-xs type="submit"  ラス
-              button.btn.btn-default.btn-xs type="submit"  キアロ
+              - memo.tags.each do |tag|
+                button.btn.btn-default.btn-xs type="submit" = tag.tag
+              / button.btn.btn-default.btn-xs type="submit"  セツ
+              / button.btn.btn-default.btn-xs type="submit"  ラス
+              / button.btn.btn-default.btn-xs type="submit"  キアロ
 
     #footer.container style="background:deeppink;"
       p ねこてちょうの半分は優しさでできています。バファリンと同じです。

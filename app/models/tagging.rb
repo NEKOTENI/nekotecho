@@ -1,4 +1,4 @@
 class Tagging < ActiveRecord::Base
   belongs_to :memo
-  belongs_to :Tag
+  belongs_to :tag
 end

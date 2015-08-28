@@ -16,10 +16,12 @@
               br
               = text_field_tag :image
               .field
+              br
               = label_tag :タグを選ぶ（タグなしでも投稿できます！）
-              .checkbox
+              .field
               - @tags.each do |tag|
-                input type="checkbox" = tag.tag
+                = check_box_tag 'tag_id[]', tag.id, false, {}
+                = tag.tag
               br
               br
               .actions
