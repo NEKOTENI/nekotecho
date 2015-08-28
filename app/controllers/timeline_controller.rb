@@ -2,12 +2,11 @@ class TimelineController < ApplicationController
 
 	def index
     @memos = Memo.where(user_id: current_user.id).order("id DESC")
-    @tags = Tag.all
-    # @users = User.all
+    @tags = Tag.where(user_id: current_user.id)
 	end
 
   def new
-    @tags = Tag.all
+    @tags = Tag.where(user_id: current_user.id)
   end
 
   def create
