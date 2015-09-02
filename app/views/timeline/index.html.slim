@@ -15,11 +15,6 @@ html lang="ja"
       | script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
 
   body
-
-    #header.container style="background:pink; height: 120px;"
-      h1 ねこてちょう
-      a.btn.btn-primary.btn-lg href="timeline/new" type="submit" style="float:right" メモを投稿する
-
     .container style="padding:10px 0"
       .row
         .col-sm-4 style="background:white;"
@@ -38,6 +33,7 @@ html lang="ja"
                 = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","list-group-item",active]
 
         .col-sm-8 style="background:white;"
+          = link_to "メモを登録する", timeline_new_path, { class: ["btn","btn-default","btn-lg"], style: "padding: 20px; margin: 10px;"}
           - if @memos.present?
             - @memos.each do |memo|
               .panel.panel-default
@@ -45,16 +41,16 @@ html lang="ja"
                   = memo.created_at.in_time_zone('Tokyo').strftime("%Y年%m月%d日 %H時%M分")
                 .panel-body
                   = memo.text
+                  br
+                  = image_tag(memo.image)
 
                 - memo.tags.each do |tag|
                   = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","btn","btn-default","btn-xs"]
-                  / button.btn.btn-default.btn-xs type="submit" = tag.tag
+
           - else
             .panel-body
               p まだ記事が投稿されていません
 
-    #footer.container style="background:deeppink;"
-      p ねこてちょうの半分は優しさでできています。バファリンと同じです。
 
 
 

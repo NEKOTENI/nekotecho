@@ -3,7 +3,7 @@
     .container style="padding: 10px;"
       .row
         .col-sm-4 style="background:white;"
-          .panel.panel-primary
+          .panel.panel-default
             /! Default panel contents
             .panel-heading.h3 タグを作成する
             .panel-body
@@ -12,4 +12,4 @@
               br
               = text_field_tag :tag
               .actions
-              = submit_tag "作成する"
+              = submit_tag "作成する", class:["button","btn","btn-default"]

@@ -6,14 +6,17 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
 
-  body
-    #nav
-      - if current_user
-        = link_to "Edit Profile", edit_user_path(current_user.id)
-        = link_to "Logout", :logout, method: :post
-      - else
-        = link_to "Register", new_user_path
-        = link_to "Login", :login
+  body style="padding-top: 70px;"
+    #nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          = link_to "ねこてちょう", timeline_path, class: ["navbar-brand"]
+
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            - if current_user
+              li = link_to "ユーザー設定", edit_user_path(current_user.id)
+              li = link_to "ログアウト", :logout, method: :post
 
     p#notice = flash[:notice]
     p#alert = flash[:alert]
