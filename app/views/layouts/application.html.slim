@@ -18,7 +18,8 @@ html
               li = link_to "ユーザー設定", edit_user_path(current_user.id)
               li = link_to "ログアウト", :logout, method: :post
 
-    p#notice = flash[:notice]
-    p#alert = flash[:alert]
+    .container
+      p#notice = flash[:notice]
+      p#alert = flash[:alert]
 
-    == yield
+      == yield
