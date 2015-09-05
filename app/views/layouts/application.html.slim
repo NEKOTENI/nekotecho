@@ -10,7 +10,10 @@ html
     #nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
-          = link_to "ねこてちょう", timeline_path, class: ["navbar-brand"]
+          - if current_user
+            = link_to "ねこてちょう", timeline_path, class: ["navbar-brand"]
+          - else
+            = link_to "ねこてちょう", root_path, class: ["navbar-brand"]
 
         .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
