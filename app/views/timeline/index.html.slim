@@ -33,7 +33,7 @@ html lang="ja"
                 = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","list-group-item",active]
 
         .col-sm-8 style="background:white;"
-          = link_to "メモを登録する", timeline_new_path, { class: ["btn","btn-default","btn-lg"], style: "padding: 20px; margin: 10px;"}
+          = link_to "メモを投稿する", timeline_new_path, { class: ["btn","btn-default","btn-lg"], style: "padding: 20px; margin: 10px;"}
           - if @memos.present?
             - @memos.each do |memo|
               .panel.panel-default
