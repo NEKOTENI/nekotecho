@@ -3,5 +3,7 @@ class Memo < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through=>:taggings
 
-  # メモが空だったらエラーメッセージを出すバリデーションを書くこと。
+  # メモが空でないか？
+  validates :text, presence: true
+  validates :user_id, presence: true
 end
