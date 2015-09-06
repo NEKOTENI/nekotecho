@@ -49,6 +49,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.01'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 group :test do
