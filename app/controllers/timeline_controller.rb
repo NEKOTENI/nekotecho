@@ -17,10 +17,11 @@ class TimelineController < ApplicationController
 
   def create
     memo = Memo.create!(text: params[:text], image: params[:image], user_id: current_user.id)
+
     if params[:tag_id]
       tags = Tag.where(id: params[:tag_id], user_id: current_user.id)
       tags.each do |tag|
-        Tagging.create!(memo_id: memo.id, tag_id: tag)
+        Tagging.create!(memo_id: memo.id, tag_id: tag.id)
       end
     end
     redirect_to(:timeline)

@@ -20,7 +20,7 @@
               = label_tag :タグを選ぶ（タグなしでも投稿できます！）
               .field
               - @tags.each do |tag|
-                = check_box_tag 'tag_id[]', tag.id, false, {}
+                = check_box_tag 'tag_id[]', tag.id, false, {id: "tag_#{tag.id}"}
                 = tag.tag
               br
               br

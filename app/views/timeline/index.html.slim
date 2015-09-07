@@ -17,7 +17,7 @@ html lang="ja"
   body
     .container style="padding:10px 0"
       .row
-        .col-sm-4 style="background:white;"
+        .col-sm-4.tag_list_container style="background:white;"
           .panel.panel-default
             /! Default panel contents
             .panel-heading タグ一覧
@@ -32,7 +32,7 @@ html lang="ja"
                 - active = "active" if params[:tag_id] == tag.id.to_s
                 = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","list-group-item",active]
 
-        .col-sm-8 style="background:white;"
+        .col-sm-8.main_content style="background:white;"
           = link_to "メモを投稿する", timeline_new_path, { class: ["btn","btn-default","btn-lg"], style: "padding: 20px; margin: 10px;"}
           - if @memos.present?
             - @memos.each do |memo|
