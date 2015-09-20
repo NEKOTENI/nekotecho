@@ -42,7 +42,7 @@ html lang="ja"
                 .panel-body
                   = memo.text
                   br
-                  = image_tag(memo.image)
+                  = image_tag(memo.image.url(:medium))
 
                 - memo.tags.each do |tag|
                   = link_to tag.tag, timeline_path(tag_id: tag.id), class: ["button","btn","btn-default","btn-xs"]

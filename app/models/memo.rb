@@ -5,7 +5,7 @@ class Memo < ActiveRecord::Base
 
   # PaperClip用の設定
   has_attached_file :image,
-                    :styles => { medium: "100×100>" }
+                    :styles => { medium: "400x400>" }
   validates_attachment_content_type :image,
                                     :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
