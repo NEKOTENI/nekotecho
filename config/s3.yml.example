@@ -1,0 +1,5 @@
+# config/s3.yml
+bucket: YOUREBUCKET
+access_key_id: ACCESSKEY
+secret_access_key: SECRETKEY
+s3_host_name: s3-ap-northeast-1.amazonaws.com
