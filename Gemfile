@@ -42,6 +42,8 @@ gem 'paperclip'
 
 gem 'aws-sdk', '< 2.0'
 
+gem 'rails_12factor'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
